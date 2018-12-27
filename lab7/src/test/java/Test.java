@@ -20,7 +20,7 @@ public class Test {
             Chrome.getDriver().navigate().to("https://rozetka.com.ua/protein/c273294/");
             Chrome.getDriver().manage().window().maximize();
             Thread.sleep(2000);
-            ContextFinal.CheckOrder(ContextOrder.order(ContextCart.Order(ContextMain.ChooseItem(new MainPage(),"Протеин Power Pro Mix Fight 1000 г Лесной орех (285086)","Украина",200,2000)),"Mister","Trickster","Киев","0988773356","vamdemonsteeve@gmai.com"),"Mister","Trickster");
+            ContextFinal.CheckOrder(ContextOrder.order(ContextCart.Order(ContextMain.ChooseItem(new MainPage(),"Протеин Ванситон Ультра-Про 900 г","Украина",200,2000)),"Mister","Trickster","Киев","0988773356","vamdemonsteeve@gmai.com"),"Mister","Trickster");
 
         }
         catch (Exception e){e.printStackTrace();}

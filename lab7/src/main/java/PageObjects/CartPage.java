@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.Chrome;
 import utility.Waiter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,11 +30,11 @@ public GoodsPage continuePurchase(){
 }
 public ClientDataPage order(){
     try {
-        Thread.sleep(500);
+        Thread.sleep(1000);
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
-    Waiter.wait.until(o->{return ExpectedConditions.presenceOfElementLocated(By.id("popup-checkout"));});
+    //new WebDriverWait(Chrome.getDriver(),2000).until(ExpectedConditions.presenceOfElementLocated(By.id("popup-checkou")));
     Order.click();
     return new ClientDataPage();
 }

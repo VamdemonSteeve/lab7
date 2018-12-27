@@ -24,11 +24,15 @@ public class OrderPage extends Page {
     @FindBy(xpath = "//*[@id='make-order']")
     private Button submit;
     public OrderPage inputNameSurname(String N,String S){
+        if(!Name.isDisplayed()||!Surname.isDisplayed())
+            return this;
         Name.input(N,true);
         Surname.input(S,true);
         return this;
     }
     public OrderPage inputAddress(String address){
+        if(!Address.isDisplayed())
+            return this;
         Address.input(address,true);
         return this;
     }

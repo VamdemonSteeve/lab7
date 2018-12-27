@@ -19,11 +19,11 @@ import java.util.List;
 public class MainPage extends Page {
     @FindBy(xpath = "//*[@id='rz-search']/form/div[1]/div[2]/input")
     private TextField SearchBar;
-    @FindBy(xpath = "//*[@id=\"26819[min]\"]")
+    @FindBy(id = "26819[min]")
     public TextField MinimalPrice;
-    @FindBy(xpath="//*[@id=\"26819[max]\"]")
+    @FindBy(id="26819[max]")
     public TextField MaximalPrice;
-    @FindBy(xpath = "//*[@id='submitprice']")
+    @FindBy(id = "submitprice")
     public Button ok;
     @FindBy(xpath = "//*[@id='sort_strana-proizvoditel-97388']/descendant::a")
     private List<Link> Producer;
@@ -68,9 +68,9 @@ public class MainPage extends Page {
     }
     public GoodsPage selectGood(String name){
         for(Link link : Goods){
-            //System.out.println(link.getText());
+            System.out.println(link.getText());
             if(link.getText().equals(name)) {
-                //System.out.println(link.getText());
+                System.out.println(link.getText());
                 //System.out.println("FOUND!");
                 link.follow();
                 break;
